@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>La Vuelta — Festival de la Tortilla</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <a class="logo" href="#inicio" aria-label="La Vuelta, inicio">
+            <span>LA</span>
+            <span>VUELTA</span>
+        </a>
+
+        <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false"></button>
+
+        <nav class="main-nav" aria-label="Navegación principal">
+            <a href="#festival">Festival</a>
+            <a href="#programa">Programa</a>
+            <a href="#concurso">Concurso</a>
+            <a href="#entradas">Entradas</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- INICIO -->
+        <section class="hero" id="inicio">
+            <div class="hero-copy">
+                <p class="eyebrow">MADRID · 15—17 MAYO 2027</p>
+                <h1>LA<br><em>VUELTA</em></h1>
+                <p class="hero-subtitle">Festival de la Tortilla de Patatas</p>
+                <p class="hero-text">
+                    Tres días para celebrar uno de los platos más queridos de Madrid.
+                    Tortilla, barrio, música y mucha discusión.
+                </p>
+                <a class="button button-dark" href="#entradas">COMPRAR ENTRADAS</a>
+            </div>
+
+            <div class="hero-bottom">
+                <span>UNA CELEBRACIÓN CASTIZA</span>
+                <span>DESCUBRE EL FESTIVAL</span>
+            </div>
+        </section>
+
+        <!-- FESTIVAL -->
+
+        <section class="intro section" id="festival">
+            <div class="section-label">01 / EL FESTIVAL</div>
+            <div class="intro-grid">
+                <h2>La tortilla<br><em>se celebra.</em></h2>
+                <div>
+                    <p class="large-copy">
+                        La vuelta nace para celebrar la tortilla de patatas
+                        como parte de nuestra cultura popular.
+                    </p>
+                    <p>
+                        Un encuentro entre gastronomía, tradición y cultura de barrio.
+                        Cocineros, bares, familias y curiosos se reúnen para descubrir
+                        nuevas formas de preparar un clásico.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROGRAMA -->
+
+        <section class="program section" id="programa">
+            <div class="section-label">02 / PROGRAMA</div>
+            <div class="section-heading">
+                <h2>TRES DÍAS.<br><em>UNA TORTILLA.</em></h2>
+                <p>Consulta las actividades y prepara la vuelta.</p>
+            </div>
+
+            <div class="days">
+                <button class="day-button active" data-day="viernes">VIERNES <small>15 MAY</small></button>
+                <button class="day-button" data-day="sabado">SÁBADO <small>16 MAY</small></button>
+                <button class="day-button" data-day="domingo">DOMINGO <small>17 MAY</small></button>
+            </div>
+
+            <div class="schedule" data-schedule="viernes">
+                <article class="event">
+                    <time>18:00</time>
+                    <div><span class="tag">APERTURA</span><h3>Se abre la vuelta</h3><p>Inauguración del festival y primera degustación.</p></div>
+                </article>
+                <article class="event">
+                    <time>20:00</time>
+                    <div><span class="tag">MÚSICA</span><h3>Verbena de barrio</h3><p>Sesión musical al aire libre con sabor castizo.</p></div>
+                </article>
+                <article class="event">
+                    <time>22:00</time>
+                    <div><span class="tag">GASTRONOMÍA</span><h3>La gran degustación</h3><p>Una selección de tortillas de bares madrileños.</p></div>
+                </article>
+            </div>
+        </section>
+
+        <!-- CONCURSO -->
+
+        <section class="concurso section" id="concurso">
+           
+            <div class="contest-copy">
+                <div class="section-label">03 / CONCURSO</div>
+                <h2>¿QUIÉN HACE<br>LA MEJOR<br><em>TORTILLA?</em></h2>
+                <p>
+                    Más de 30 participantes competirán por convertirse en la tortilla
+                    favorita del público y del jurado.
+                </p>
+                <div class="stats">
+                    <div><strong>30+</strong><span>PARTICIPANTES</span></div>
+                    <div><strong>12</strong><span>JURADOS</span></div>
+                    <div><strong>1</strong><span>GANADOR</span></div>
+                </div>
+                <button class="button button-light open-modal">VER BASES</button>
+            </div>
+        </section>
+        
+        <!-- CONCURSO -->
+
+        <section class="tickets section" id="entradas">
+            <div class="section-label">05 / ENTRADAS</div>
+            <h2>ELIGE TU<br><em>VUELTA.</em></h2>
+
+            <div class="ticket-grid">
+                <article class="ticket">
+                    <span>01</span>
+                    <h3>VERMUT</h3>
+                    <p>Acceso al recinto + programa.</p>
+                    <strong>8 €</strong>
+                    <button class="ticket-select" data-ticket="Vermut — 8 €">ELEGIR</button>
+                </article>
+                <article class="ticket featured">
+                    <span>02</span>
+                    <h3>CASTIZO</h3>
+                    <p>Acceso + degustación + actividades.</p>
+                    <strong>18 €</strong>
+                    <button class="ticket-select" data-ticket="Castizo — 18 €">ELEGIR</button>
+                </article>
+                <article class="ticket">
+                    <span>03</span>
+                    <h3>MAESTRO</h3>
+                    <p>Acceso + degustación + cata + concurso.</p>
+                    <strong>30 €</strong>
+                    <button class="ticket-select" data-ticket="Maestro — 30 €">ELEGIR</button>
+                </article>
+            </div>
+        </section>
+
+        <!-- CONTACTO-->
+
+        <section class="contact section" id="contacto">
+            <div>
+                <div class="section-label">06 / CONTACTO</div>
+                <h2>¿NOS<br><em>VEMOS?</em></h2>
+            </div>
+
+            <form id="contactForm" novalidate>
+                <label for="name">Nombre</label>
+                <input id="name" name="name" type="text" placeholder="Tu nombre">
+                <span class="error" id="nameError"></span>
+
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="tuemail@ejemplo.com">
+                <span class="error" id="emailError"></span>
+
+                <label class="check">
+                    <input id="terms" name="terms" type="checkbox">
+                    <span>Acepto recibir información sobre LA VUELTA.</span>
+                </label>
+                <span class="error" id="termsError"></span>
+
+                <button class="button button-dark" type="submit">APUNTARME </button>
+                <p class="form-message" id="formMessage" aria-live="polite"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-logo">LA VUELTA</div>
+        <p>Festival de la Tortilla de Patatas · Madrid · 2027</p>
+        <p>LA VUELTA</p>
+    </footer>
+
+    <div class="modal" id="rulesModal" aria-hidden="true">
+        <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+            <button class="modal-close" aria-label="Cerrar"></button>
+            <span class="tag">CONCURSO</span>
+            <h2 id="modalTitle">BASES DE<br><em>LA VUELTA</em></h2>
+            <ul>
+                <li>La tortilla debe ser elaborada por el participante.</li>
+                <li>Se valorará sabor, textura, presentación y técnica.</li>
+                <li>El jurado realizará una cata a ciegas.</li>
+                <li>El público podrá participar en la votación popular.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
