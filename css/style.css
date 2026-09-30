@@ -1,0 +1,98 @@
+:root {
+    --fondo: #f4ead8;
+    --texto-rojo: #a22216;
+    --negro: #181613;
+    --blanco: #fffaf1;
+    --border: 2px solid var(--negro);
+    --serif: Georgia, "Times New Roman", serif;
+    --sans: Arial, Helvetica, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--fondo);
+    color: var(--negro);
+    font-family: var(--sans);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+.site-header {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 78px;
+    padding: 0 4vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--fondo);
+    border-bottom: var(--border);
+    backdrop-filter: blur(8px);
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    font-weight: 900;
+    font-size: 16px;
+    letter-spacing: -.05em;
+}
+
+.logo span:last-child {
+    color: var(--texto-rojo);
+}
+
+.main-nav {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.main-nav a {
+    position: relative;
+}
+
+.main-nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: var(--texto-rojo);
+    transition: width .25s;
+}
+
+.main-nav a:hover::after {
+    width: 100%;
+}
+
+.menu-toggle {
+    display: none;
+    border: 0;
+    background: transparent;
+}
+
