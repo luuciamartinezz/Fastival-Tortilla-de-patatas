@@ -146,3 +146,29 @@ function comprar() {
 function cerrarVentana() {
     document.getElementById("modal").style.display = "none";
 }
+
+
+// MENÚ HAMBURGUESA
+const menuToggle = document.querySelector(".menu-toggle");
+const mainNav = document.querySelector(".main-nav");
+
+menuToggle.addEventListener("click", () => {
+
+    const menuAbierto = mainNav.classList.toggle("open");
+
+    menuToggle.classList.toggle("active");
+
+    menuToggle.setAttribute("aria-expanded", menuAbierto);
+});
+
+const navLinks = document.querySelectorAll(".main-nav a");
+
+navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+
+        mainNav.classList.remove("open");
+        menuToggle.classList.remove("active");
+
+        menuToggle.setAttribute("aria-expanded", "false");
+    });
+});

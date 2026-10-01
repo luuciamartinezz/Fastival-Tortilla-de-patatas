@@ -726,3 +726,442 @@ footer {
     background: var(--texto-rojo);
 }
 
+
+/* RESPONSIVE TABLET -------------------------------------------------------*/
+@media (max-width: 900px) {
+
+    /* HEADER */
+    .site-header {
+        height: 70px;
+        padding: 0 5vw;
+    }
+
+    .menu-toggle {
+        display: block;
+        width: 35px;
+        height: 25px;
+        position: relative;
+        cursor: pointer;
+        z-index: 110;
+    }
+
+    .menu-toggle::before,
+    .menu-toggle::after,
+    .menu-toggle {
+        background: none;
+    }
+
+    .menu-toggle::before,
+    .menu-toggle::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 28px;
+        height: 3px;
+        background: var(--negro);
+        transition: 0.3s ease;
+    }
+
+    .menu-toggle::before {
+        top: 5px;
+        box-shadow: 0 8px 0 var(--negro);
+    }
+
+    .menu-toggle::after {
+        top: 21px;
+    }
+
+    .menu-toggle.active::before {
+        top: 13px;
+        transform: rotate(45deg);
+        box-shadow: none;
+    }
+
+    .menu-toggle.active::after {
+        top: 13px;
+        transform: rotate(-45deg);
+    }
+
+    /* MENÚ */
+    .main-nav {
+        position: fixed;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        height: calc(100vh - 70px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 35px;
+        background: var(--fondo);
+        border-top: var(--border);
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+        z-index: 100;
+    }
+
+    .main-nav.open {
+        transform: translateX(0);
+    }
+
+    .main-nav a {
+        font-size: 25px;
+    }
+
+    .main-nav a::after {
+        bottom: -8px;
+    }
+
+
+    /* HERO */
+    .hero {
+        padding: 110px 6vw 50px;
+        min-height: 100vh;
+    }
+
+    .hero h1 {
+        font-size: clamp(90px, 20vw, 180px);
+    }
+
+    .hero-subtitle {
+        margin-top: 40px;
+    }
+
+
+    /* SECCIONES */
+    .section {
+        padding: 90px 6vw;
+    }
+
+    .section-label {
+        margin-bottom: 45px;
+    }
+
+
+    /* FESTIVAL */
+    .intro-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+
+    /* PROGRAMA */
+    .section-heading {
+        margin-bottom: 50px;
+    }
+
+    .days {
+        grid-template-columns: 1fr;
+    }
+
+    .day-button {
+        padding: 20px;
+    }
+
+    .day-button + .day-button {
+        border-top: 0;
+    }
+
+
+    /* CONCURSO */
+    .concurso {
+        grid-template-columns: 1fr;
+    }
+
+    .contest-copy {
+        width: 100%;
+    }
+
+    .stats {
+        gap: 30px;
+    }
+
+
+    /* ENTRADAS */
+    .ticket-grid {
+        grid-template-columns: 1fr;
+        margin-top: 50px;
+    }
+
+    .ticket {
+        min-height: 150px;
+    }
+
+    .ticket + .ticket {
+        border-left: var(--border);
+        border-top: 0;
+    }
+
+    .ticket h3 {
+        margin: 35px 0 10px;
+    }
+
+
+    /* CONTACTO */
+    .contact {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+
+    /* FOOTER */
+    footer {
+        padding: 35px 6vw;
+    }
+}
+
+
+/* RESPONSIVE MÓVIL--------------------------------------------------*/
+
+@media (max-width: 600px) {
+
+    /* HEADER */
+    .site-header {
+        height: 65px;
+        padding: 0 5vw;
+    }
+
+    .main-nav {
+        top: 65px;
+        height: calc(100vh - 65px);
+    }
+
+    .main-nav a {
+        font-size: 22px;
+    }
+
+
+    /* HERO */
+    .hero {
+        min-height: 100svh;
+        padding: 100px 6vw 100px;
+    }
+
+    .hero h1 {
+        font-size: clamp(75px, 25vw, 130px);
+        line-height: 0.76;
+    }
+
+    .eyebrow {
+        margin-bottom: 25px;
+        font-size: 9px;
+    }
+
+    .hero-subtitle {
+        margin-top: 35px;
+        font-size: 18px;
+        line-height: 1.1;
+    }
+
+    .hero-text {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .hero-bottom {
+        left: 6vw;
+        right: 6vw;
+        bottom: 25px;
+        flex-direction: column;
+        gap: 8px;
+        font-size: 8px;
+    }
+
+
+    /* SECCIONES */
+    .section {
+        padding: 75px 6vw;
+    }
+
+    .section-label {
+        margin-bottom: 35px;
+        font-size: 9px;
+    }
+
+    h2 {
+        font-size: clamp(50px, 17vw, 85px);
+        line-height: 0.85;
+    }
+
+
+    /* FESTIVAL */
+    .intro-grid {
+        gap: 35px;
+    }
+
+    .large-copy {
+        font-size: 25px;
+    }
+
+    .intro-grid p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+
+    /* PROGRAMA */
+    .section-heading {
+        margin-bottom: 40px;
+    }
+
+    .days {
+        grid-template-columns: 1fr;
+    }
+
+    .day-button {
+        padding: 18px;
+        font-size: 15px;
+    }
+
+    .event {
+        grid-template-columns: 65px 1fr;
+        gap: 15px;
+        padding: 25px 0;
+    }
+
+    .event time {
+        font-size: 14px;
+    }
+
+    .event h3 {
+        font-size: 21px;
+        margin: 7px 0;
+    }
+
+    .event p {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+
+    /* CONCURSO */
+    .contest-copy p {
+        font-size: 14px;
+        line-height: 1.5;
+        margin: 25px 0;
+    }
+
+    .stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+        margin-bottom: 35px;
+    }
+
+    .stats strong {
+        font-size: 32px;
+    }
+
+    .stats span {
+        font-size: 8px;
+    }
+
+    .button-light {
+        width: 100%;
+        padding: 14px 20px;
+    }
+
+
+    /* ENTRADAS */
+    .ticket-grid {
+        margin-top: 40px;
+    }
+
+    .ticket {
+        padding: 25px;
+        min-height: 150px;
+    }
+
+    .ticket h3 {
+        font-size: 26px;
+        margin: 35px 0 10px;
+    }
+
+    .ticket p {
+        font-size: 13px;
+    }
+
+
+    /* CONTACTO */
+    .contact {
+        gap: 45px;
+    }
+
+    .contact input[type="text"],
+    .contact input[type="email"] {
+        font-size: 14px;
+    }
+
+    .button-dark {
+        width: 100%;
+        padding: 14px;
+    }
+
+
+    /* FOOTER */
+    footer {
+        padding: 30px 6vw;
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 8px;
+    }
+
+
+    /* BOTÓN ENTRADAS */
+    .fixed-tickets-button {
+        right: 15px;
+        bottom: 15px;
+        padding: 13px 20px;
+        font-size: 10px;
+    }
+
+
+    /* MODALES */
+    .modal {
+        padding: 15px;
+    }
+
+    .modal-content {
+        padding: 40px 25px;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+
+    .modal-content h2 {
+        font-size: clamp(45px, 14vw, 70px);
+    }
+
+    .modal-content li {
+        font-size: 13px;
+    }
+
+    #modal > div {
+        padding: 30px 25px;
+    }
+
+    #modal h2 {
+        font-size: 35px;
+    }
+
+
+    /* FORMULARIO ENTRADAS */
+    .tickets-content {
+        padding: 40px 25px;
+    }
+
+    .tickets-content h2 {
+        margin-bottom: 30px;
+    }
+
+    #entradas input[type="text"],
+    #entradas input[type="email"],
+    #entradas input[type="number"],
+    #entradas select {
+        font-size: 13px;
+    }
+
+    #entradas input[type="submit"] {
+        padding: 15px;
+    }
+}
