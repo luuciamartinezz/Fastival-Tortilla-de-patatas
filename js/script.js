@@ -42,10 +42,10 @@ dayButtons.forEach(button => {
 });
 
 
-// Modal
+// MODAL BASES
 const modal = document.querySelector("#rulesModal");
 const openModal = document.querySelector(".open-modal");
-const closeModal = document.querySelector(".modal-close");
+const closeModal = document.querySelector("#rulesModal .modal-close");
 
 function toggleModal(show) {
     modal.classList.toggle("open", show);
@@ -56,13 +56,10 @@ openModal.addEventListener("click", () => toggleModal(true));
 closeModal.addEventListener("click", () => toggleModal(false));
 
 modal.addEventListener("click", event => {
-    if (event.target === modal) toggleModal(false);
+    if (event.target === modal) {
+        toggleModal(false);
+    }
 });
-
-document.addEventListener("keydown", event => {
-    if (event.key === "Escape") toggleModal(false);
-});
-
 
 
 

@@ -737,19 +737,15 @@ footer {
     }
 
     .menu-toggle {
-        display: block;
-        width: 35px;
-        height: 25px;
-        position: relative;
-        cursor: pointer;
-        z-index: 110;
-    }
-
-    .menu-toggle::before,
-    .menu-toggle::after,
-    .menu-toggle {
-        background: none;
-    }
+    display: block;
+    width: 35px;
+    height: 25px;
+    position: relative;
+    cursor: pointer;
+    z-index: 110;
+    border: 0;
+    background: transparent;
+}
 
     .menu-toggle::before,
     .menu-toggle::after {
