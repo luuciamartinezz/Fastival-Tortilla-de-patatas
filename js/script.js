@@ -117,7 +117,7 @@ function costeTotal() {
 }
 
 function comprar() {
-  console.log("-----------función comprar");
+  console.log("función comprar");
 
   document.getElementById("nom").innerHTML =
     document.getElementById("nombre").value;

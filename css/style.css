@@ -216,13 +216,14 @@ h2 {
     grid-template-columns: repeat(3, 1fr);
     border: transparent;
 }
-
 .day-button {
     padding: 25px;
     text-align: left;
     background: transparent;
+    border: var(--border);
     font-size: 18px;
     font-weight: 900;
+    cursor: pointer;
 }
 
 .day-button.active {
@@ -308,8 +309,17 @@ h2 {
 .button-light {
     background-color: var(--blanco);
     color: var(--negro);
-    padding: 10px 55px;
+    padding: 10px 95px;
     font-family: var(--sans);
+    border: 2px solid var(--blanco);
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.button-light:hover {
+    background-color: var(--amarillo);
+    border-color: var(--amarillo);
+    transform: scale(1.06);
 }
 
 /* ENTRADAS----------------------------------------------------------------------*/
@@ -439,6 +449,15 @@ h2 {
     color: var(--fondo);
     padding: 10px 15px;
     font-family: var(--sans);
+    border: 2px solid var(--negro);
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.button-dark:hover {
+    background-color: var(--texto-rojo);
+    border-color: var(--texto-rojo);
+    transform: scale(1.06);
 }
 
 /* FOOTER----------------------------------------------------------------------*/
@@ -523,7 +542,6 @@ footer {
     font-size: 12px;
     font-weight: 900;
     text-transform: uppercase;
-
     cursor: pointer;
 }
 
