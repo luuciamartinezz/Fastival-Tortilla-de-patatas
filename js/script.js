@@ -1,19 +1,4 @@
-const menuToggle = document.querySelector(".menu-toggle");
-const mainNav = document.querySelector(".main-nav");
-
-menuToggle.addEventListener("click", () => {
-    const isOpen = mainNav.classList.toggle("open");
-    menuToggle.setAttribute("aria-expanded", isOpen);
-});
-
-document.querySelectorAll(".main-nav a").forEach(link => {
-    link.addEventListener("click", () => {
-        mainNav.classList.remove("open");
-        menuToggle.setAttribute("aria-expanded", "false");
-    });
-});
-
-// Programa por días
+// Programa
 const dayButtons = document.querySelectorAll(".day-button");
 const schedule = document.querySelector(".schedule");
 
@@ -56,17 +41,6 @@ dayButtons.forEach(button => {
     });
 });
 
-// Debate de la cebolla
-const onionButtons = document.querySelectorAll(".onion-option");
-const answer = document.querySelector(".answer");
-
-onionButtons.forEach(button => {
-    button.addEventListener("click", () => {
-        onionButtons.forEach(item => item.classList.remove("selected"));
-        button.classList.add("selected");
-        answer.textContent = `HAS ELEGIDO: ${button.dataset.answer}`;
-    });
-});
 
 // Modal
 const modal = document.querySelector("#rulesModal");
@@ -89,56 +63,86 @@ document.addEventListener("keydown", event => {
     if (event.key === "Escape") toggleModal(false);
 });
 
-// Selección de entrada
-document.querySelectorAll(".ticket-select").forEach(button => {
-    button.addEventListener("click", () => {
-        const ticket = button.dataset.ticket;
-        document.querySelector("#contacto").scrollIntoView({ behavior: "smooth" });
-        document.querySelector("#formMessage").textContent = `Has seleccionado: ${ticket}`;
-    });
+
+
+
+// MODAL ENTRADAS
+const ticketsModal = document.querySelector("#ticketsModal");
+const ticketsButton = document.querySelector(".fixed-tickets-button");
+const ticketsClose = document.querySelector(".tickets-close");
+
+function toggleTicketsModal(show) {
+    ticketsModal.classList.toggle("open", show);
+    ticketsModal.setAttribute("aria-hidden", !show);
+}
+
+ticketsButton.addEventListener("click", () => {
+    toggleTicketsModal(true);
 });
 
-// Formulario con validación JS
-const form = document.querySelector("#contactForm");
+ticketsClose.addEventListener("click", () => {
+    toggleTicketsModal(false);
+});
 
-form.addEventListener("submit", event => {
-    event.preventDefault();
-
-    const name = document.querySelector("#name");
-    const email = document.querySelector("#email");
-    const terms = document.querySelector("#terms");
-
-    const nameError = document.querySelector("#nameError");
-    const emailError = document.querySelector("#emailError");
-    const termsError = document.querySelector("#termsError");
-    const formMessage = document.querySelector("#formMessage");
-
-    nameError.textContent = "";
-    emailError.textContent = "";
-    termsError.textContent = "";
-    formMessage.textContent = "";
-
-    let valid = true;
-
-    if (name.value.trim().length < 2) {
-        nameError.textContent = "Introduce tu nombre.";
-        valid = false;
-    }
-
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    if (!emailPattern.test(email.value.trim())) {
-        emailError.textContent = "Introduce un email válido.";
-        valid = false;
-    }
-
-    if (!terms.checked) {
-        termsError.textContent = "Debes aceptar esta casilla.";
-        valid = false;
-    }
-
-    if (valid) {
-        formMessage.textContent = "¡Perfecto! Te hemos apuntado a la lista de LA VUELTA.";
-        form.reset();
+ticketsModal.addEventListener("click", event => {
+    if (event.target === ticketsModal) {
+        toggleTicketsModal(false);
     }
 });
+
+//ENTRADAS
+
+function costeTotal() {
+
+    let numeroEntradas = document.getElementById("numero").value;
+    let valorExposicion = document.getElementById("exposicion").value;
+
+    let costePorEntrada = 0;
+
+    if (valorExposicion === "e1") {
+        costePorEntrada = 19;
+    } else if (valorExposicion === "e2") {
+        costePorEntrada = 25;
+    } else {
+        costePorEntrada = 50;
+    }
+
+    let costeEntradas = numeroEntradas * costePorEntrada;
+
+    if (!numeroEntradas) {
+        costeEntradas = 0;
+    }
+
+    document.getElementById("coste").innerHTML = costeEntradas + " €";
+}
+
+function comprar() {
+  console.log("-----------función comprar");
+
+  document.getElementById("nom").innerHTML =
+    document.getElementById("nombre").value;
+  document.getElementById("corr").innerHTML =
+    document.getElementById("correo").value;
+  document.getElementById("num").innerHTML =
+    document.getElementById("numero").value;
+  document.getElementById("ct").innerHTML =
+    document.getElementById("coste").innerHTML;
+
+  let valorExposicion = document.getElementById("exposicion").value;
+  let nombreExposicion = "";
+  if (valorExposicion === "e1") {
+    nombreExposicion = "VERMUT - 19 €";
+  } else if (valorExposicion === "e2") {
+    nombreExposicion = "CASTIZO - 25 €";
+  } else {
+    nombreExposicion = "MAESTRO - 50 €";
+  }
+  document.getElementById("ex").innerHTML = nombreExposicion;
+
+  document.getElementById("modal").style.display = "flex";
+  return false;
+}
+
+function cerrarVentana() {
+    document.getElementById("modal").style.display = "none";
+}

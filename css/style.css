@@ -1,7 +1,7 @@
 :root {
     --fondo: #f4ead8;
     --texto-rojo: #a22216;
-    --amarillo: #ffb302; 
+    --amarillo: #dd9a00; 
     --negro: #181613;
     --blanco: #fffaf1;
     --border: 2px solid var(--negro);
@@ -26,16 +26,8 @@ a {
     text-decoration: none;
 }
 
-button,
-input {
-    font: inherit;
-}
 
-button {
-    cursor: pointer;
-}
-
-/* HEADER  */
+/* HEADER----------------------------------------------------------------------*/
 
 .site-header {
     position: fixed;
@@ -63,6 +55,7 @@ button {
 
 .logo span:last-child {
     color: var(--texto-rojo);
+    font-style: italic;
 }
 
 .main-nav {
@@ -99,11 +92,11 @@ button {
     background: transparent;
 }
 
-/* INICIO */
+/* INICIO----------------------------------------------------------------------*/
 
 .hero {
     min-height: 100vh;
-    padding: 150px 6vw 45px;
+    padding: 100px 6vw 45px;
     position: relative;
     overflow: hidden;
     border-bottom: var(--border);
@@ -134,7 +127,10 @@ button {
     font-weight: 900;
 }
 
-h1 em,
+h1 em { 
+    color: var(--texto-rojo);
+}
+
 h2 em {
     color: var(--texto-rojo);
     font-family: var(--serif);
@@ -156,35 +152,6 @@ h2 em {
     line-height: 1.5;
 }
 
-.button {
-    display: inline-flex;
-    justify-content: space-between;
-    align-items: center;
-    min-width: 190px;
-    padding: 15px 19px;
-    border: var(--border);
-    font-size: 12px;
-    font-weight: 900;
-    transition: 0.25s ease;
-}
-
-.button-dark {
-    background: var(--negro);
-    color: var(--blanco);
-}
-
-.button-dark:hover {
-    background: var(--texto-rojo);
-    transform: translateY(-3px);
-}
-
-.button-light {
-    color: var(--negro);
-}
-
-.button-light:hover {
-    transform: translateY(-3px);
-}
 
 .hero-bottom {
     position: absolute;
@@ -199,7 +166,7 @@ h2 em {
 }
 
 
-/* FESTIVAL  */
+/* FESTIVAL----------------------------------------------------------------------*/
 
 .section {
     padding: 110px 7vw;
@@ -229,7 +196,7 @@ h2 {
     margin-bottom: 25px;
 }
 
-/* PROGRAMA  */
+/* PROGRAMA----------------------------------------------------------------------*/
 
 .section-heading {
     display: flex;
@@ -292,7 +259,7 @@ h2 {
     text-transform: uppercase;
 }
 
-/* CONCURSO */
+/* CONCURSO----------------------------------------------------------------------*/
 
 .concurso {
     background: var(--texto-rojo);
@@ -338,7 +305,14 @@ h2 {
     letter-spacing: 0.1em;
 }
 
-/* ENTRADAS */
+.button-light {
+    background-color: var(--blanco);
+    color: var(--negro);
+    padding: 10px 55px;
+    font-family: var(--sans);
+}
+
+/* ENTRADAS----------------------------------------------------------------------*/
 
 .ticket-grid {
     display: grid;
@@ -349,7 +323,7 @@ h2 {
 .ticket {
     padding: 35px;
     border: var(--border);
-    min-height: 370px;
+    min-height: 170px;
     display: flex;
     flex-direction: column;
 }
@@ -400,7 +374,7 @@ h2 {
     color: var(--negro);
 }
 
-/* CONTACTO */
+/* CONTACTO----------------------------------------------------------------------*/
 
 .contact {
     display: grid;
@@ -460,7 +434,14 @@ h2 {
     font-weight: 900;
 }
 
-/* FOOTER*/
+.button-dark {
+    background-color: var(--negro);
+    color: var(--fondo);
+    padding: 10px 15px;
+    font-family: var(--sans);
+}
+
+/* FOOTER----------------------------------------------------------------------*/
 
 footer {
     padding: 40px 7vw;
@@ -478,7 +459,7 @@ footer {
     letter-spacing: -0.07em;
 }
 
-/* BASES*/
+/* BASES----------------------------------------------------------------------*/
 
 .modal {
     position: fixed;
@@ -525,5 +506,205 @@ footer {
     border: 0;
     background: transparent;
     font-size: 36px;
+}
+
+/* BOTÓN FIJO ENTRADAS ------------------------------------------------------*/
+
+.fixed-tickets-button {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    z-index: 150;
+    padding: 16px 28px;
+    background: var(--negro);
+    color: var(--fondo);
+    border: none;
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 900;
+    text-transform: uppercase;
+
+    cursor: pointer;
+}
+
+.fixed-tickets-button:hover {
+    background: var(--negro);
+    color: var(--fondo);
+}
+
+
+/* FORMULARIO DE ENTRADAS ---------------------------------------------------*/
+
+.tickets-content {
+    max-width: 650px;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.tickets-content h2 {
+    margin: 25px 0 40px;
+}
+
+
+/* FORMULARIO ---------------------------------------------------*/
+
+#entradas {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#entradas label {
+    margin-top: 10px;
+    font-size: 11px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+#entradas input[type="text"],
+#entradas input[type="email"],
+#entradas input[type="number"],
+#entradas select {
+    width: 100%;
+    padding: 14px 0;
+
+    background: transparent;
+
+    border: 0;
+    border-bottom: 2px solid var(--negro);
+
+    font-family: var(--sans);
+    font-size: 14px;
+
+    outline: none;
+}
+
+#entradas input:focus,
+#entradas select:focus {
+    border-color: var(--texto-rojo);
+}
+
+
+/* TOTAL ---------------------------------------------------*/
+
+.total {
+    margin-top: 25px;
+    padding: 20px 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-top: 2px solid var(--negro);
+    border-bottom: 2px solid var(--negro);
+}
+
+.total span {
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+}
+
+.total strong {
+    font-family: var(--serif);
+    font-size: 32px;
+    font-weight: 400;
+}
+
+
+/* BOTÓN COMPRAR ---------------------------------------------------*/
+
+#entradas input[type="submit"] {
+    margin-top: 20px;
+    padding: 16px;
+
+    background: var(--negro);
+    color: var(--blanco);
+
+    border: none;
+
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+
+    cursor: pointer;
+}
+
+#entradas input[type="submit"]:hover {
+    background: var(--texto-rojo);
+}
+
+
+/* MODAL CONFIRMACIÓN -------------------------------------------------------*/
+
+#modal {
+    position: fixed;
+    inset: 0;
+    z-index: 300;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background: rgba(0, 0, 0, 0.7);
+}
+
+#modal > div {
+    width: 100%;
+    max-width: 500px;
+
+    padding: 45px;
+
+    background: var(--fondo);
+    border: var(--border);
+}
+
+#modal h2 {
+    margin-bottom: 15px;
+    font-size: 45px;
+}
+
+#modal p {
+    margin-bottom: 25px;
+}
+
+#modal ul {
+    list-style: none;
+    margin-bottom: 25px;
+}
+
+#modal li {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--negro);
+    font-size: 13px;
+}
+
+#modal li span {
+    font-weight: 900;
+}
+
+#modal button {
+    width: 100%;
+    padding: 14px;
+
+    background: var(--negro);
+    color: var(--blanco);
+
+    border: none;
+
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 900;
+
+    cursor: pointer;
+}
+
+#modal button:hover {
+    background: var(--texto-rojo);
 }
 

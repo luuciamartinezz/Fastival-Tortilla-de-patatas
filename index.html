@@ -12,19 +12,19 @@
             <span>LA</span>
             <span>VUELTA</span>
         </a>
-
         <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false"></button>
-
-        <nav class="main-nav" aria-label="Navegación principal">
+        <nav class="main-nav" aria-label="Barra de navegación">
             <a href="#festival">Festival</a>
             <a href="#programa">Programa</a>
             <a href="#concurso">Concurso</a>
-            <a href="#entradas">Entradas</a>
+            <a href="#informacionentradas"> Información entradas</a>
             <a href="#contacto">Contacto</a>
         </nav>
     </header>
 
-    <!-- INICIO -->
+
+
+    <!-- INICIO ----------------------------------------------------->
         <section class="hero" id="inicio">
             <div class="hero-copy">
                 <p class="eyebrow">MADRID · 15—17 MAYO 2027</p>
@@ -34,7 +34,7 @@
                     Tres días para celebrar uno de los platos más queridos de Madrid.
                     Tortilla, barrio, música y mucha discusión.
                 </p>
-                <a class="button button-dark" href="#entradas">COMPRAR ENTRADAS</a>
+                
             </div>
             <div class="hero-bottom">
                 <span>UNA CELEBRACIÓN CASTIZA</span>
@@ -42,7 +42,9 @@
             </div>
         </section>
 
-     <!-- FESTIVAL -->
+
+
+     <!-- FESTIVAL ----------------------------------------------------->
 
         <section class="intro section" id="festival">
             <div class="section-label">01 / EL FESTIVAL</div>
@@ -50,7 +52,7 @@
                 <h2>La tortilla<br><em>se celebra.</em></h2>
                 <div>
                     <p class="large-copy">
-                        La vuelta nace para celebrar la tortilla de patatas
+                        La vuelta nace para celebrar la tortilla
                         como parte de nuestra cultura popular.
                     </p>
                     <p>
@@ -62,12 +64,14 @@
             </div>
         </section>
 
-     <!-- PROGRAMA -->
+
+
+     <!-- PROGRAMA ----------------------------------------------------->
 
         <section class="program section" id="programa">
             <div class="section-label">02 / PROGRAMA</div>
             <div class="section-heading">
-                <h2>TRES DÍAS.<br><em>UN FESTIVAL.</em></h2>
+                <h2>Tres días.<br><em>un festival.</em></h2>
             </div>
 
             <div class="days">
@@ -92,7 +96,9 @@
             </div>
         </section>
 
-    <!-- CONCURSO -->
+
+
+    <!-- CONCURSO ----------------------------------------------------->
 
         <section class="concurso section" id="concurso">
             <div class="contest-copy">
@@ -111,48 +117,47 @@
             </div>
         </section>
         
-    <!-- ENTRADAS -->
 
-        <section class="tickets section" id="entradas">
-            <div class="section-label">05 / ENTRADAS</div>
-            <h2>ELIGE TU<br><em>VUELTA.</em></h2>
+
+    <!-- INFORMACIÓN ENTRADAS ----------------------------------------------------->
+
+        <section class="tickets section" id="informacionentradas">
+            <div class="section-label">05 / INFORMACIÓN ENTRADAS</div>
+            <h2>Elige tu<em>  entrada.</em></h2>
 
             <div class="ticket-grid">
                 <article class="ticket">
                     <span>01</span>
                     <h3>VERMUT</h3>
                     <p>Acceso al recinto + programa.</p>
-                    <strong>8 €</strong>
-                    <button class="ticket-select" data-ticket="Vermut — 8 €">ELEGIR</button>
                 </article>
-                <article class="ticket featured">
+                <article class="ticket">
                     <span>02</span>
                     <h3>CASTIZO</h3>
                     <p>Acceso + degustación + actividades.</p>
-                    <strong>18 €</strong>
-                    <button class="ticket-select" data-ticket="Castizo — 18 €">ELEGIR</button>
                 </article>
                 <article class="ticket">
                     <span>03</span>
                     <h3>MAESTRO</h3>
                     <p>Acceso + degustación + cata + concurso.</p>
-                    <strong>30 €</strong>
-                    <button class="ticket-select" data-ticket="Maestro — 30 €">ELEGIR</button>
                 </article>
+                
             </div>
         </section>
 
-    <!-- CONTACTO-->
+
+        
+    <!-- CONTACTO----------------------------------------------------->
 
         <section class="contact section" id="contacto">
             <div>
                 <div class="section-label">06 / CONTACTO</div>
-                <h2>¿NOS<br><em>VEMOS?</em></h2>
+                <h2>¿Alguna<br><em>duda?</em></h2>
             </div>
 
             <form id="contactForm" novalidate>
-                <label for="name">Nombre</label>
-                <input id="name" name="name" type="text" placeholder="Tu nombre">
+                <label for="name">Cuestión</label>
+                <input id="name" name="name" type="text" placeholder="Escribe aquí">
                 <span class="error" id="nameError"></span>
 
                 <label for="email">Email</label>
@@ -165,33 +170,121 @@
                 </label>
                 <span class="error" id="termsError"></span>
 
-                <button class="button button-dark" type="submit">APUNTARME </button>
+                <button class="button button-dark" type="submit">CONTACTAR </button>
                 <p class="form-message" id="formMessage" aria-live="polite"></p>
             </form>
         </section>
 
-    <!-- FOOTER-->
+
+
+    <!-- FOOTER----------------------------------------------------->
     <footer>
-        <div class="footer-logo">LA VUELTA</div>
+
         <p>Festival de la Tortilla de Patatas · Madrid · 2027</p>
         <p>LA VUELTA</p>
     </footer>
+    
+    
+    <!-- BOTÓN FIJO ENTRADAS ----------------------------------------------------->
+     <button class="fixed-tickets-button">ENTRADAS</button>
+    <!-- MODAL ENTRADAS ----------------------------------------------------->
+      <div class="modal" id="ticketsModal" aria-hidden="true">
+        <div class="modal-content tickets-content">
 
-    <!--BASES-->
-    <div class="modal" id="rulesModal" aria-hidden="true">
-        <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-            <button class="modal-close" aria-label="Cerrar">x</button>
-            <span class="tag">CONCURSO</span>
-            <h2 id="modalTitle">BASES DE<br><em>LA VUELTA</em></h2>
-            <ul>
-                <li>La tortilla debe ser elaborada por el participante.</li>
-                <li>Se valorará sabor, textura, presentación y técnica.</li>
-                <li>El jurado realizará una cata a ciegas.</li>
-                <li>El público podrá participar en la votación popular.</li>
-            </ul>
-        </div>
+        <button class="modal-close tickets-close" aria-label="Cerrar">×</button>
+
+        <span class="tag">ENTRADAS</span>
+
+        <h2 id="ticketsTitle">
+            Compra tu<br><em>entrada.</em>
+        </h2>
+
+        <form id="entradas" onsubmit="return comprar();">
+
+            <label for="nombre">Nombre</label>
+            <input
+                type="text"
+                id="nombre"
+                placeholder="Escribe tu nombre"
+                required>
+
+            <label for="correo">Correo electrónico</label>
+            <input
+                type="email"
+                id="correo"
+                placeholder="Escribe tu correo"
+                required>
+
+            <label for="exposicion">Tipo de entrada</label>
+
+            <select id="exposicion" onchange="costeTotal()">
+                <option value="e1">VERMUT — 19 €</option>
+                <option value="e2">CASTIZO — 25 €</option>
+                <option value="e3">MAESTRO — 50 €</option>
+            </select>
+
+            <label for="numero">Número de entradas</label>
+
+            <input
+                type="number"
+                id="numero"
+                min="1"
+                max="10"
+                placeholder="Número de entradas"
+                required
+                onchange="costeTotal()">
+
+            <div class="total">
+                <span>TOTAL</span>
+                <strong id="coste">0 €</strong>
+            </div>
+
+            <input
+                type="submit"
+                value="COMPRAR ENTRADAS" >
+        </form>
+    </div>
+</div>
+
+
+<!-- MODAL CONFIRMACIÓN ----------------------------------------------------->
+<div id="modal">
+    <div>
+        <h2>COMPRA REALIZADA</h2>
+        <p>Tu compra se ha realizado correctamente.</p>
+        <ul>
+            <li>Nombre: <span id="nom"></span></li>
+            <li>Correo electrónico: <span id="corr"></span></li>
+            <li>Entrada: <span id="ex"></span></li>
+            <li>Número de entradas: <span id="num"></span></li>
+            <li>Coste total: <span id="ct"></span></li>
+        </ul>
+        <button onclick="cerrarVentana()">ACEPTAR</button>
+    </div>
+</div>
+
+
+ <!-- BASES ----------------------------------------------------->
+<div class="modal" id="rulesModal" aria-hidden="true">
+
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+
+        <button class="modal-close" aria-label="Cerrar">×</button>
+
+        <span class="tag">CONCURSO</span>
+
+        <h2 id="modalTitle">BASES DEL CONCURSO</h2>
+
+        <ul>
+            <li>La tortilla debe ser elaborada por el participante.</li>
+            <li>Se valorará sabor, textura, presentación y técnica.</li>
+            <li>El jurado realizará una cata a ciegas.</li>
+            <li>El público podrá participar en la votación popular.</li>
+        </ul>
+
     </div>
 
+</div>
     <script src="js/script.js"></script>
 </body>
 </html>
