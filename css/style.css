@@ -1,9 +1,9 @@
 :root {
-    --fondo: #fff8ec;
-    --texto-rojo: #a22216;
-    --amarillo: #dd9a00; 
-    --negro: #181613;
-    --blanco: #fffaf1;
+    --fondo: #ffedc2;
+    --texto-rojo: #7e140a;
+    --amarillo: #ffb404; 
+    --negro: #000000;
+    --blanco: #ffffff;
     --border: 2px solid var(--negro);
     --serif: Georgia, "Times New Roman", serif;
     --sans: Arial, Helvetica, sans-serif;
@@ -92,6 +92,7 @@ a {
     background: transparent;
 }
 
+
 /* INICIO----------------------------------------------------------------------*/
 
 .hero {
@@ -121,7 +122,7 @@ a {
 }
 
 .hero h1 {
-    font-size: clamp(100px, 17vw, 260px);
+    font-size: 18rem;
     line-height: 0.72;
     letter-spacing: -0.09em;
     font-weight: 900;
@@ -141,7 +142,7 @@ h2 em {
 
 .hero-subtitle {
     margin-top: 50px;
-    font-size: clamp(20px, 2vw, 30px);
+    font-size: 1.75rem;
     font-weight: 900;
     text-transform: uppercase;
 }
@@ -184,17 +185,18 @@ h2 em {
 }
 
 h2 {
-    font-size: clamp(60px, 9vw, 135px);
+    font-size: 8.5rem;
     line-height: 0.82;
     letter-spacing: -0.075em;
     font-weight: 900;
 }
 
 .large-copy {
-    font-size: clamp(24px, 3vw, 42px);
+    font-size: 2.625rem;
     line-height: 1.08;
     margin-bottom: 25px;
 }
+
 
 /* PROGRAMA----------------------------------------------------------------------*/
 
@@ -216,6 +218,7 @@ h2 {
     grid-template-columns: repeat(3, 1fr);
     border: transparent;
 }
+
 .day-button {
     padding: 25px;
     text-align: left;
@@ -259,6 +262,7 @@ h2 {
     font-size: 30px;
     text-transform: uppercase;
 }
+
 
 /* CONCURSO----------------------------------------------------------------------*/
 
@@ -322,6 +326,7 @@ h2 {
     transform: scale(1.06);
 }
 
+
 /* ENTRADAS----------------------------------------------------------------------*/
 
 .ticket-grid {
@@ -383,6 +388,7 @@ h2 {
     background: var(--amarillo);
     color: var(--negro);
 }
+
 
 /* CONTACTO----------------------------------------------------------------------*/
 
@@ -460,6 +466,7 @@ h2 {
     transform: scale(1.06);
 }
 
+
 /* FOOTER----------------------------------------------------------------------*/
 
 footer {
@@ -477,6 +484,7 @@ footer {
     font-size: 28px;
     letter-spacing: -0.07em;
 }
+
 
 /* BASES----------------------------------------------------------------------*/
 
@@ -509,7 +517,7 @@ footer {
 
 .modal-content h2 {
     margin: 25px 0;
-    font-size: clamp(55px, 8vw, 90px);
+    font-size: 5.625rem;
 }
 
 .modal-content li {
@@ -526,6 +534,7 @@ footer {
     background: transparent;
     font-size: 36px;
 }
+
 
 /* BOTÓN FIJO ENTRADAS ------------------------------------------------------*/
 
@@ -586,15 +595,11 @@ footer {
 #entradas select {
     width: 100%;
     padding: 14px 0;
-
     background: transparent;
-
     border: 0;
     border-bottom: 2px solid var(--negro);
-
     font-family: var(--sans);
     font-size: 14px;
-
     outline: none;
 }
 
@@ -609,11 +614,9 @@ footer {
 .total {
     margin-top: 25px;
     padding: 20px 0;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     border-top: 2px solid var(--negro);
     border-bottom: 2px solid var(--negro);
 }
@@ -636,17 +639,13 @@ footer {
 #entradas input[type="submit"] {
     margin-top: 20px;
     padding: 16px;
-
     background: var(--negro);
     color: var(--blanco);
-
     border: none;
-
     font-family: var(--sans);
     font-size: 11px;
     font-weight: 900;
     letter-spacing: 0.08em;
-
     cursor: pointer;
 }
 
@@ -661,23 +660,17 @@ footer {
     position: fixed;
     inset: 0;
     z-index: 300;
-
     display: none;
-
     align-items: center;
     justify-content: center;
-
     padding: 20px;
-
     background: rgba(0, 0, 0, 0.7);
 }
 
 #modal > div {
     width: 100%;
     max-width: 500px;
-
     padding: 45px;
-
     background: var(--fondo);
     border: var(--border);
 }
@@ -709,16 +702,12 @@ footer {
 #modal button {
     width: 100%;
     padding: 14px;
-
     background: var(--negro);
     color: var(--blanco);
-
     border: none;
-
     font-family: var(--sans);
     font-size: 11px;
     font-weight: 900;
-
     cursor: pointer;
 }
 
@@ -728,24 +717,26 @@ footer {
 
 
 /* RESPONSIVE TABLET -------------------------------------------------------*/
+
 @media (max-width: 900px) {
 
     /* HEADER */
+
     .site-header {
         height: 70px;
         padding: 0 5vw;
     }
 
     .menu-toggle {
-    display: block;
-    width: 35px;
-    height: 25px;
-    position: relative;
-    cursor: pointer;
-    z-index: 110;
-    border: 0;
-    background: transparent;
-}
+        display: block;
+        width: 35px;
+        height: 25px;
+        position: relative;
+        cursor: pointer;
+        z-index: 110;
+        border: 0;
+        background: transparent;
+    }
 
     .menu-toggle::before,
     .menu-toggle::after {
@@ -778,7 +769,9 @@ footer {
         transform: rotate(-45deg);
     }
 
+
     /* MENÚ */
+
     .main-nav {
         position: fixed;
         top: 70px;
@@ -811,13 +804,14 @@ footer {
 
 
     /* HERO */
+
     .hero {
         padding: 110px 6vw 50px;
         min-height: 100vh;
     }
 
     .hero h1 {
-        font-size: clamp(90px, 20vw, 180px);
+        font-size: 8rem;
     }
 
     .hero-subtitle {
@@ -826,6 +820,7 @@ footer {
 
 
     /* SECCIONES */
+
     .section {
         padding: 90px 6vw;
     }
@@ -836,6 +831,7 @@ footer {
 
 
     /* FESTIVAL */
+
     .intro-grid {
         grid-template-columns: 1fr;
         gap: 45px;
@@ -843,6 +839,7 @@ footer {
 
 
     /* PROGRAMA */
+
     .section-heading {
         margin-bottom: 50px;
     }
@@ -861,6 +858,7 @@ footer {
 
 
     /* CONCURSO */
+
     .concurso {
         grid-template-columns: 1fr;
     }
@@ -875,6 +873,7 @@ footer {
 
 
     /* ENTRADAS */
+
     .ticket-grid {
         grid-template-columns: 1fr;
         margin-top: 50px;
@@ -895,6 +894,7 @@ footer {
 
 
     /* CONTACTO */
+
     .contact {
         grid-template-columns: 1fr;
         gap: 60px;
@@ -902,6 +902,7 @@ footer {
 
 
     /* FOOTER */
+
     footer {
         padding: 35px 6vw;
     }
@@ -913,6 +914,7 @@ footer {
 @media (max-width: 600px) {
 
     /* HEADER */
+
     .site-header {
         height: 65px;
         padding: 0 5vw;
@@ -929,13 +931,14 @@ footer {
 
 
     /* HERO */
+
     .hero {
         min-height: 100svh;
         padding: 100px 6vw 100px;
     }
 
     .hero h1 {
-        font-size: clamp(75px, 25vw, 130px);
+        font-size: 4.7rem;
         line-height: 0.76;
     }
 
@@ -946,7 +949,7 @@ footer {
 
     .hero-subtitle {
         margin-top: 35px;
-        font-size: 18px;
+        font-size: 1.125rem;
         line-height: 1.1;
     }
 
@@ -966,6 +969,7 @@ footer {
 
 
     /* SECCIONES */
+
     .section {
         padding: 75px 6vw;
     }
@@ -976,18 +980,19 @@ footer {
     }
 
     h2 {
-        font-size: clamp(50px, 17vw, 85px);
+        font-size: 3.5rem;
         line-height: 0.85;
     }
 
 
     /* FESTIVAL */
+
     .intro-grid {
         gap: 35px;
     }
 
     .large-copy {
-        font-size: 25px;
+        font-size: 1.5625rem;
     }
 
     .intro-grid p {
@@ -997,6 +1002,7 @@ footer {
 
 
     /* PROGRAMA */
+
     .section-heading {
         margin-bottom: 40px;
     }
@@ -1032,6 +1038,7 @@ footer {
 
 
     /* CONCURSO */
+
     .contest-copy p {
         font-size: 14px;
         line-height: 1.5;
@@ -1060,6 +1067,7 @@ footer {
 
 
     /* ENTRADAS */
+
     .ticket-grid {
         margin-top: 40px;
     }
@@ -1080,6 +1088,7 @@ footer {
 
 
     /* CONTACTO */
+
     .contact {
         gap: 45px;
     }
@@ -1096,6 +1105,7 @@ footer {
 
 
     /* FOOTER */
+
     footer {
         padding: 30px 6vw;
         flex-direction: column;
@@ -1105,6 +1115,7 @@ footer {
 
 
     /* BOTÓN ENTRADAS */
+
     .fixed-tickets-button {
         right: 15px;
         bottom: 15px;
@@ -1114,6 +1125,7 @@ footer {
 
 
     /* MODALES */
+
     .modal {
         padding: 15px;
     }
@@ -1125,7 +1137,7 @@ footer {
     }
 
     .modal-content h2 {
-        font-size: clamp(45px, 14vw, 70px);
+        font-size: 2.8rem;
     }
 
     .modal-content li {
@@ -1142,6 +1154,7 @@ footer {
 
 
     /* FORMULARIO ENTRADAS */
+
     .tickets-content {
         padding: 40px 25px;
     }
